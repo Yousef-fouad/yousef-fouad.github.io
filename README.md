@@ -1,1 +1,955 @@
 # youseffouad.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Zorba Legacy — A Name of Heritage, Character &amp; Ambition</title>
+<meta name="description" content="An editorial exploration of the Zorba / Zorbas surname — its linguistic origins, documented historical figures, cultural legacy, and modern achievements.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Playfair+Display:wght@500;600;700;800;900&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --black: #0a0d0a;
+    --forest: #0e1912;
+    --forest-2: #132018;
+    --forest-3: #182a1f;
+    --gold: #c9a24b;
+    --gold-bright: #e8c877;
+    --bronze: #8a6a3f;
+    --ivory: #f3ead8;
+    --ivory-dim: #cfc5ae;
+    --line: rgba(201,162,75,0.28);
+    --max: 1180px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--black);
+    color: var(--ivory);
+    font-family: 'Jost', 'Segoe UI', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .serif {
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: var(--ivory);
+    letter-spacing: 0.01em;
+  }
+
+  a { color: var(--gold-bright); text-decoration: none; }
+  a:hover { color: var(--ivory); }
+
+  img { max-width: 100%; display: block; }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow {
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 0.72rem;
+    color: var(--gold);
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+
+  .eyebrow::before { content: "— "; color: var(--bronze); }
+  .eyebrow::after { content: " —"; color: var(--bronze); }
+
+  .section-title {
+    font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+    margin: 0 0 8px;
+  }
+
+  .section-sub {
+    color: var(--ivory-dim);
+    font-size: 1.02rem;
+    max-width: 680px;
+    margin: 0 0 42px;
+  }
+
+  section { position: relative; padding: 110px 0; }
+
+  .divider-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 0 0 52px;
+    color: var(--gold);
+  }
+  .divider-ornament::before, .divider-ornament::after {
+    content: "";
+    height: 1px;
+    width: 64px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .divider-ornament svg { width: 22px; height: 22px; fill: var(--gold); }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.9s ease, transform 0.9s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  /* ================= NAV ================= */
+  header.site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(10,13,10,0.78);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.3s ease;
+  }
+
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .mono {
+    width: 40px; height: 40px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-bright);
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  .brand .word {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.14em;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    color: var(--ivory);
+  }
+
+  nav.links { display: flex; gap: 30px; align-items: center; }
+  nav.links a {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ivory-dim);
+    position: relative;
+    padding-bottom: 4px;
+  }
+  nav.links a::after {
+    content: "";
+    position: absolute; left: 0; bottom: 0;
+    width: 0; height: 1px; background: var(--gold-bright);
+    transition: width 0.3s ease;
+  }
+  nav.links a:hover { color: var(--gold-bright); }
+  nav.links a:hover::after { width: 100%; }
+
+  .nav-toggle {
+    display: none;
+    background: none; border: 1px solid var(--line); border-radius: 6px;
+    width: 42px; height: 38px;
+    cursor: pointer;
+    flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span { display: block; width: 20px; height: 1px; background: var(--gold-bright); }
+
+  /* ================= HERO ================= */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 160px 24px 90px;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,162,75,0.12), transparent 60%),
+      linear-gradient(180deg, var(--black) 0%, var(--forest) 55%, var(--black) 100%);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(201,162,75,0.035) 0 2px, transparent 2px 34px);
+    pointer-events: none;
+  }
+
+  .hero-frame {
+    position: absolute;
+    inset: 22px;
+    border: 1px solid var(--line);
+    pointer-events: none;
+  }
+  .hero-frame::before, .hero-frame::after {
+    content: "";
+    position: absolute;
+    width: 26px; height: 26px;
+    border: 1px solid var(--gold);
+  }
+  .hero-frame::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .hero-frame::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .monogram {
+    width: 128px; height: 128px;
+    margin: 0 auto 30px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    animation: fadeDown 1.2s ease both;
+  }
+  .monogram::before {
+    content: "";
+    position: absolute; inset: 10px;
+    border: 1px solid rgba(201,162,75,0.4);
+    border-radius: 50%;
+  }
+  .monogram span {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: var(--gold-bright);
+    text-shadow: 0 0 24px rgba(232,200,119,0.35);
+  }
+
+  .hero-eyebrow {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: var(--gold);
+    margin-bottom: 22px;
+    animation: fadeDown 1.2s ease 0.1s both;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 5.4rem);
+    line-height: 1.05;
+    margin: 0 0 22px;
+    background: linear-gradient(180deg, #fbf3dd 0%, var(--gold-bright) 55%, var(--bronze) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: fadeUp 1.3s ease 0.15s both;
+  }
+
+  .hero p.sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    color: var(--ivory-dim);
+    max-width: 620px;
+    margin: 0 auto 40px;
+    animation: fadeUp 1.3s ease 0.3s both;
+  }
+
+  .hero-cta { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; animation: fadeUp 1.3s ease 0.45s both; }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    transition: all 0.35s ease;
+  }
+  .btn:hover { background: var(--gold); color: var(--black); }
+  .btn.solid { background: var(--gold); color: var(--black); }
+  .btn.solid:hover { background: var(--gold-bright); color: var(--black); }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 34px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--gold);
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    animation: fadeUp 1.3s ease 0.6s both;
+  }
+  .scroll-cue .stick { width: 1px; height: 36px; background: linear-gradient(180deg, var(--gold), transparent); animation: pulse 2s infinite; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-18px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+  /* ================= GENERIC SECTION ALTERNATION ================= */
+  .bg-alt { background: var(--forest); }
+  .bg-alt2 { background: linear-gradient(180deg, var(--forest-2), var(--black)); }
+
+  /* ================= MEANING ================= */
+  .meaning-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .word-card {
+    border: 1px solid var(--line);
+    padding: 34px 32px;
+    background: rgba(201,162,75,0.03);
+    position: relative;
+  }
+  .word-card .headword {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--gold-bright);
+    margin: 0 0 4px;
+  }
+  .word-card .ipa { color: var(--ivory-dim); font-style: italic; margin-bottom: 18px; display: block; }
+  .word-card dl { margin: 0; }
+  .word-card dt { color: var(--gold); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.14em; margin-top: 16px; }
+  .word-card dd { margin: 6px 0 0; color: var(--ivory-dim); }
+
+  .note-box {
+    margin-top: 26px;
+    border-left: 2px solid var(--bronze);
+    padding: 4px 0 4px 20px;
+    color: var(--ivory-dim);
+    font-size: 0.92rem;
+  }
+
+  /* ================= ORIGINS ================= */
+  .origin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+  }
+  .card {
+    border: 1px solid var(--line);
+    padding: 30px 28px;
+    background: linear-gradient(180deg, rgba(201,162,75,0.05), transparent);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+  }
+  .card:hover { transform: translateY(-6px); border-color: var(--gold); }
+  .card h3 { font-size: 1.25rem; margin: 0 0 12px; color: var(--gold-bright); }
+  .card p { color: var(--ivory-dim); font-size: 0.95rem; margin: 0; }
+  .card .tag { display:inline-block; font-size:0.66rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--bronze); border:1px solid var(--bronze); padding:3px 10px; margin-bottom:14px; }
+
+  /* ================= FIGURES ================= */
+  .figure-list { display: flex; flex-direction: column; gap: 0; }
+  .figure {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 36px;
+    padding: 42px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .figure:last-child { border-bottom: none; }
+  .figure-portrait {
+    width: 170px; height: 170px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: var(--gold-bright);
+    background: radial-gradient(circle at 30% 20%, rgba(201,162,75,0.18), transparent 70%);
+  }
+  .figure-body h3 { font-size: 1.5rem; margin: 0 0 4px; }
+  .figure-body .years { color: var(--bronze); font-size: 0.85rem; letter-spacing: 0.08em; margin-bottom: 14px; display:block; }
+  .figure-body p { color: var(--ivory-dim); margin: 0 0 12px; }
+  .figure-body .src { font-size: 0.78rem; }
+
+  /* ================= TIMELINE ================= */
+  .timeline { position: relative; margin-top: 10px; }
+  .timeline::before {
+    content: "";
+    position: absolute; left: 20px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, transparent, var(--gold) 6%, var(--gold) 94%, transparent);
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 8px;
+  }
+  .timeline-item .dot {
+    position: absolute; left: 11px; top: 6px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--black);
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  .timeline-item.open .dot, .timeline-item .dot:hover { background: var(--gold); box-shadow: 0 0 14px rgba(201,162,75,0.6); }
+  .timeline-head {
+    display: flex; align-items: baseline; gap: 18px;
+    cursor: pointer;
+    padding: 10px 0;
+    user-select: none;
+  }
+  .timeline-head .year { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold-bright); min-width: 70px; }
+  .timeline-head h4 { margin: 0; font-size: 1.05rem; font-weight: 600; color: var(--ivory); font-family: 'Jost', sans-serif; }
+  .timeline-head .chev { margin-left: auto; color: var(--gold); transition: transform 0.3s ease; }
+  .timeline-item.open .chev { transform: rotate(180deg); }
+  .timeline-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, padding 0.45s ease;
+    color: var(--ivory-dim);
+    font-size: 0.94rem;
+  }
+  .timeline-item.open .timeline-body { max-height: 240px; padding-bottom: 22px; }
+  .timeline-body .inner { padding-top: 2px; max-width: 640px; }
+
+  /* ================= ENTERPRISE ================= */
+  .enterprise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  .ent-card {
+    border: 1px solid var(--line);
+    padding: 36px 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ent-card::before {
+    content: "";
+    position: absolute; top: -40px; right: -40px;
+    width: 120px; height: 120px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+  }
+  .ent-card h3 { color: var(--gold-bright); font-size: 1.3rem; margin: 0 0 14px; }
+  .ent-card p { color: var(--ivory-dim); margin: 0 0 14px; }
+  .ent-card .meta { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bronze); }
+
+  /* ================= VALUES ================= */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2px;
+    border: 1px solid var(--line);
+  }
+  .value-cell {
+    padding: 40px 22px;
+    text-align: center;
+    border: 1px solid var(--line);
+    background: var(--black);
+    transition: background 0.4s ease, transform 0.4s ease;
+  }
+  .value-cell:hover { background: var(--forest-3); transform: translateY(-4px); }
+  .value-cell .glyph { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold-bright); margin-bottom: 14px; }
+  .value-cell h4 { margin: 0 0 10px; font-size: 1.05rem; letter-spacing: 0.04em; }
+  .value-cell p { font-size: 0.85rem; color: var(--ivory-dim); margin: 0; }
+
+  /* ================= FUTURE ================= */
+  .future {
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 100%, rgba(201,162,75,0.1), transparent 60%),
+      var(--forest);
+  }
+  .future .section-sub { margin-left: auto; margin-right: auto; }
+  .future blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+    color: var(--ivory);
+    max-width: 780px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+  .future blockquote::before { content: "“"; color: var(--gold); }
+  .future blockquote::after { content: "”"; color: var(--gold); }
+  .pillars { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-top: 40px; }
+  .pillar { max-width: 220px; }
+  .pillar .num { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1rem; letter-spacing: 0.15em; margin-bottom: 10px; }
+  .pillar h4 { margin: 0 0 8px; font-size: 1.05rem; }
+  .pillar p { color: var(--ivory-dim); font-size: 0.88rem; margin: 0; }
+
+  /* ================= REFERENCES ================= */
+  .ref-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 50px; }
+  .ref-list li { break-inside: avoid; margin-bottom: 18px; padding-left: 22px; position: relative; font-size: 0.92rem; color: var(--ivory-dim); }
+  .ref-list li::before { content: "§"; position: absolute; left: 0; color: var(--gold); }
+  .ref-list a { border-bottom: 1px dotted var(--line); }
+
+  .disclaimer {
+    margin-top: 50px;
+    border: 1px solid var(--line);
+    padding: 24px 28px;
+    font-size: 0.85rem;
+    color: var(--ivory-dim);
+    background: rgba(201,162,75,0.04);
+  }
+  .disclaimer strong { color: var(--gold-bright); }
+
+  /* ================= FOOTER ================= */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 50px 0 36px;
+    text-align: center;
+    color: var(--ivory-dim);
+    font-size: 0.82rem;
+  }
+  footer .mono-small {
+    width: 44px; height: 44px; margin: 0 auto 16px;
+    border: 1px solid var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-bright); font-family: 'Playfair Display', serif; font-weight: 800;
+  }
+  footer a { color: var(--ivory-dim); }
+  footer a:hover { color: var(--gold-bright); }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 900px) {
+    .meaning-grid { grid-template-columns: 1fr; }
+    .figure { grid-template-columns: 1fr; text-align: left; }
+    .figure-portrait { width: 100px; height: 100px; font-size: 1.8rem; }
+  }
+
+  @media (max-width: 760px) {
+    nav.links { display: none; }
+    .nav-toggle { display: flex; }
+    nav.links.open {
+      display: flex;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      background: var(--forest-2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 28px;
+      gap: 18px;
+    }
+    section { padding: 80px 0; }
+    .ref-list { columns: 1; }
+    .pillars { gap: 30px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="brand" aria-label="The Zorba Legacy — home">
+      <span class="mono" aria-hidden="true">Z</span>
+      <span class="word">Zorba Legacy</span>
+    </a>
+    <nav class="links" id="navLinks" aria-label="Primary">
+      <a href="#meaning">Meaning</a>
+      <a href="#origins">Origins</a>
+      <a href="#figures">Figures</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#enterprise">Enterprise</a>
+      <a href="#values">Values</a>
+      <a href="#future">Legacy</a>
+      <a href="#references">References</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="hero-wrap">
+
+  <!-- A. HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-frame" aria-hidden="true"></div>
+    <div>
+      <div class="monogram" aria-hidden="true"><span>Z</span></div>
+      <div class="hero-eyebrow">A Surname Study &amp; Heritage Tribute</div>
+      <h1>THE ZORBA LEGACY</h1>
+      <p class="sub">A Name of Heritage, Character &amp; Ambition</p>
+      <div class="hero-cta">
+        <a href="#meaning" class="btn solid">Discover the Name</a>
+        <a href="#timeline" class="btn">View the Timeline</a>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><span class="stick"></span></div>
+  </section>
+
+  <!-- B. MEANING -->
+  <section id="meaning">
+    <div class="container">
+      <span class="eyebrow">Etymology</span>
+      <h2 class="section-title reveal">The Meaning of Zorba</h2>
+      <p class="section-sub reveal">Where the name comes from, and what it has meant across centuries of Mediterranean and Near Eastern speech.</p>
+
+      <div class="meaning-grid">
+        <div class="word-card reveal">
+          <span class="headword">zorba</span>
+          <span class="ipa">/zoɾˈba/ — Turkish</span>
+          <dl>
+            <dt>Etymology</dt>
+            <dd>Inherited in Turkish from Ottoman Turkish <em>زوربه</em> (zorba, "rebel, extorter"), itself derived from the Persian <em>زور</em> (zor, meaning "force" or "violence").</dd>
+            <dt>Historic senses</dt>
+            <dd>In Ottoman and modern Turkish, <em>zorba</em> functions as both an adjective — "tyrannical, forceful" — and a noun describing a bully, tyrant, or extorter; a person who acts through strength rather than consent.</dd>
+            <dt>Hellenized form</dt>
+            <dd>The Greek surname <strong>Ζορμπάς (Zormpás)</strong> — rendered in English as <em>Zorbas</em> or <em>Zorba</em> — reflects the long linguistic exchange between Greek and Ottoman Turkish across Asia Minor, Macedonia, and the wider Ottoman-era Balkans, where Greek communities absorbed many Turkish-origin words and surnames into everyday use.</dd>
+          </dl>
+        </div>
+
+        <div class="reveal">
+          <p>Surnames that entered the Greek-speaking world during centuries of Ottoman rule often carry linguistic roots quite different from their eventual national identity — a reminder that the Eastern Mediterranean was, for hundreds of years, a shared linguistic space.</p>
+          <p>The forceful, vigorous connotation behind the root word has, over time, become associated in popular culture with vitality, boldness, and an unrestrained embrace of life — most famously through the literary character who carried the name into the twentieth century.</p>
+          <div class="note-box">
+            <strong>A note on accuracy:</strong> this is a linguistic and etymological account of the <em>word</em> and its root, not a claim about the character, values, or conduct of any specific family or individual who bears the surname today.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. HISTORICAL ORIGINS -->
+  <section class="bg-alt" id="origins">
+    <div class="container">
+      <span class="eyebrow">Geography &amp; History</span>
+      <h2 class="section-title reveal">Historical Origins</h2>
+      <p class="section-sub reveal">The documented geographical and cultural background associated with the Zorba / Zorbas surname.</p>
+
+      <div class="origin-cards">
+        <div class="card reveal">
+          <span class="tag">Asia Minor</span>
+          <h3>Magnesia &amp; the Aegean Coast</h3>
+          <p>At least one documented bearer of the name — Nikolaos Zorbas — traced his family's roots to Magnesia (modern Manisa) in Asia Minor, part of the broad pattern of Greek communities that lived across Ottoman Anatolia before the population exchanges of the early twentieth century.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Macedonia</span>
+          <h3>Pieria &amp; Chalkidiki</h3>
+          <p>Georgios Zorbas, the miner whose life inspired the literary character Alexis Zorba, was born in the Pieria Mountains of Ottoman-era Macedonia and spent decisive years working in Chalkidiki and later Mount Athos — tying the name to the mining and monastic landscapes of northern Greece.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Crete &amp; the Aegean</span>
+          <h3>Literary Setting</h3>
+          <p>Nikos Kazantzakis relocated the fictionalized "Alexis Zorba" to Crete for his 1946 novel, cementing an enduring (if literary rather than genealogical) association between the name and the Cretan landscape in global popular culture.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Modern Diaspora</span>
+          <h3>Balkans &amp; Cyprus</h3>
+          <p>In the twentieth century, individuals bearing the name settled across the wider region — including the Kingdom of Yugoslavia — while separately, a Cypriot family business using the Zorbas name built one of the island's best-known bakery and food enterprises.</p>
+        </div>
+      </div>
+
+      <div class="disclaimer reveal">
+        <strong>Important distinction:</strong> the individuals and places discussed on this site share the Zorba / Zorbas surname but are not presented as members of a single documented family tree. Surname history and family genealogy are different things — this page celebrates the former while remaining honest about the limits of the latter.
+      </div>
+    </div>
+  </section>
+
+  <!-- D. FIGURES -->
+  <section id="figures">
+    <div class="container">
+      <span class="eyebrow">Notable Namesakes</span>
+      <h2 class="section-title reveal">Figures Associated with the Name</h2>
+      <p class="section-sub reveal">Verified individuals who carried the Zorba / Zorbas surname and left a documented mark on history, literature, or culture.</p>
+
+      <div class="figure-list">
+        <article class="figure reveal">
+          <div class="figure-portrait" aria-hidden="true">NZ</div>
+          <div class="figure-body">
+            <h3>Nikolaos Zorbas</h3>
+            <span class="years">1844 – 1920 · Athens, Kingdom of Greece</span>
+            <p>A Greek army officer whose family came from Magnesia in Asia Minor. He trained at the Hellenic Army Academy and continued his studies in France and Belgium, fought in the Greco-Turkish War of 1897, and in 1909 was chosen as the nominal leader of the clandestine Military League.</p>
+            <p>The League organized the <strong>Goudi coup</strong> of August 1909, a turning point in modern Greek political history. Zorbas subsequently served as Minister of Military Affairs under Prime Minister Stephanos Dragoumis (1910) and retired as a Major General in 1911. He was a recipient of France's Legion of Honour.</p>
+            <span class="src">Source: Wikipedia — "Nikolaos Zorbas"</span>
+          </div>
+        </article>
+
+        <article class="figure reveal">
+          <div class="figure-portrait" aria-hidden="true">GZ</div>
+          <div class="figure-body">
+            <h3>Georgios "George" Zorbas</h3>
+            <span class="years">1865 – 1941 · Katafygio (Pieria) to Skopje</span>
+            <p>Born in the village of Katafygio in the Pieria mountains, then under Ottoman rule, George Zorbas worked as a woodcutter and later as a miner in Chalkidiki. In 1915 he travelled to Mount Athos, where he befriended the writer Nikos Kazantzakis; the two later worked together as miners in the Mani peninsula.</p>
+            <p>Their shared experience became the basis for Kazantzakis's 1946 novel <em>Life and Times of Alexis Zorbas</em>, translated into English as <strong>Zorba the Greek</strong> — later an Academy Award–winning 1964 film starring Anthony Quinn, a 1968 stage musical, and a 1987 ballet score by Mikis Theodorakis. George Zorbas later settled in the Kingdom of Yugoslavia, where he worked in mining near Niš and Skopje until his death in 1941.</p>
+            <span class="src">Source: Wikipedia — "George Zorbas" &amp; "Zorba the Greek"</span>
+          </div>
+        </article>
+
+        <article class="figure reveal">
+          <div class="figure-portrait" aria-hidden="true">★</div>
+          <div class="figure-body">
+            <h3>"Zorba" as a Cultural Icon</h3>
+            <span class="years">1946 – present</span>
+            <p>Through Kazantzakis's novel and its adaptations, the name "Zorba" transcended any single family to become an internationally recognised symbol of vitality, improvisation, and joy in the face of hardship — reflected in the enduring popularity of "Zorba's Dance" (sirtaki), composed by Mikis Theodorakis for the 1964 film.</p>
+            <span class="src">Source: Wikipedia — "Zorba the Greek", "Zorba the Greek (film)"</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. TIMELINE -->
+  <section class="bg-alt" id="timeline">
+    <div class="container">
+      <span class="eyebrow">Chronology</span>
+      <h2 class="section-title reveal">Timeline of the Name</h2>
+      <p class="section-sub reveal">Select a milestone to expand it. Each date below is tied to a documented, verifiable event.</p>
+
+      <div class="timeline" id="timelineList">
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1844</span>
+            <h4>Birth of Nikolaos Zorbas</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">Born in Athens to a family with roots in Magnesia, Asia Minor; later a Greek army officer and statesman.</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1865</span>
+            <h4>Birth of Georgios Zorbas</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">Born in Katafygio, in the Pieria mountains of Ottoman-era Macedonia; later the real-life basis for "Alexis Zorba."</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1909</span>
+            <h4>The Goudi Coup</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">Colonel Nikolaos Zorbas is chosen as nominal leader of the Military League, which organizes the Goudi coup in August 1909 — a decisive moment in modern Greek political history.</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1910</span>
+            <h4>Minister of Military Affairs</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">Nikolaos Zorbas is appointed Minister of Military Affairs under Prime Minister Stephanos Dragoumis, serving until October 1910.</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1915</span>
+            <h4>Mount Athos Encounter</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">George Zorbas travels to Mount Athos and befriends writer Nikos Kazantzakis, beginning the friendship that would later inspire a literary classic.</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1946</span>
+            <h4>Publication of "Zorba the Greek"</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">Nikos Kazantzakis publishes <em>Life and Times of Alexis Zorbas</em>, immortalizing the Zorba name in world literature.</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1964</span>
+            <h4>Academy Award–Winning Film</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner"><em>Zorba the Greek</em>, directed by Michael Cacoyannis and starring Anthony Quinn, wins three Academy Awards and brings global fame to the name.</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">1968</span>
+            <h4>"Zorba" the Musical</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">A stage musical adaptation, <em>Zorba</em>, debuts on Broadway, further extending the cultural reach of the name.</div></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="dot" role="button" tabindex="0" aria-expanded="false"></div>
+          <div class="timeline-head">
+            <span class="year">20th C.</span>
+            <h4>Zorbas Bakeries Founded in Cyprus</h4>
+            <span class="chev">▾</span>
+          </div>
+          <div class="timeline-body"><div class="inner">The Cypriot company "A. Zorbas &amp; Sons Ltd" (Α. Ζορπάς &amp; Υιοί) grows into one of Cyprus's leading bakery and food-service groups, still operating today under the Zorbas name.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- F. ENTERPRISE -->
+  <section id="enterprise">
+    <div class="container">
+      <span class="eyebrow">Modern Achievements</span>
+      <h2 class="section-title reveal">Enterprise &amp; Modern Achievements</h2>
+      <p class="section-sub reveal">Documented businesses and cultural accomplishments carrying the Zorba / Zorbas name into the present day.</p>
+
+      <div class="enterprise-grid">
+        <div class="ent-card reveal">
+          <h3>Zorbas Bakeries (Cyprus)</h3>
+          <p>Operating under the formal name <strong>Α. Ζορπάς &amp; Υιοί Λτδ</strong> ("A. Zorbas &amp; Sons Ltd"), this Cypriot enterprise has grown into a nationwide bakery and café network, with a loyalty app, a coffee brand ("Coffee Berry"), and a presence across Cyprus — an example of entrepreneurship built over generations.</p>
+          <span class="meta">Food &amp; Hospitality · Nicosia, Cyprus</span>
+        </div>
+
+        <div class="ent-card reveal">
+          <h3>Zorba the Greek — Global Franchise</h3>
+          <p>From novel to Oscar-winning film, Broadway musical, and ballet, the Zorba story became a self-sustaining cultural enterprise — translated worldwide and still performed and referenced today, decades after its creation.</p>
+          <span class="meta">Literature, Film &amp; Stage</span>
+        </div>
+
+        <div class="ent-card reveal">
+          <h3>"Zorba's Dance" (Sirtaki)</h3>
+          <p>Composed by Mikis Theodorakis for the 1964 film, the piece popularly known as "Zorba's Dance" became one of the most recognisable pieces of Greek music internationally, permanently linking the name to Greek cultural identity abroad.</p>
+          <span class="meta">Music &amp; Performance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- G. VALUES -->
+  <section class="bg-alt" id="values">
+    <div class="container">
+      <span class="eyebrow">What We Celebrate</span>
+      <h2 class="section-title reveal">Family Values</h2>
+      <p class="section-sub reveal">These are aspirational values this website celebrates in connection with the Zorba name and its story — not verified historical traits claimed of every person who carries the surname.</p>
+
+      <div class="values-grid reveal">
+        <div class="value-cell"><div class="glyph">Honor</div><h4>Honor</h4><p>Acting with dignity, keeping one's word, and valuing reputation earned through deeds.</p></div>
+        <div class="value-cell"><div class="glyph">Integrity</div><h4>Integrity</h4><p>Consistency between values and action, even when it is difficult or costly.</p></div>
+        <div class="value-cell"><div class="glyph">Leadership</div><h4>Leadership</h4><p>Stepping forward to guide others, as seen in moments of decisive historical action.</p></div>
+        <div class="value-cell"><div class="glyph">Resilience</div><h4>Resilience</h4><p>Rebuilding after hardship — a theme echoed throughout the Zorba story, from war to displacement.</p></div>
+        <div class="value-cell"><div class="glyph">Ambition</div><h4>Ambition</h4><p>Reaching for more — in craft, in business, in service, and in creative achievement.</p></div>
+        <div class="value-cell"><div class="glyph">Unity</div><h4>Unity</h4><p>Strength drawn from community, friendship, and shared purpose across generations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- H. FUTURE -->
+  <section class="future" id="future">
+    <div class="container">
+      <span class="eyebrow">Looking Forward</span>
+      <h2 class="section-title reveal">The Future of the Legacy</h2>
+      <p class="section-sub reveal">A legacy is not only inherited — it is built, one generation at a time.</p>
+
+      <blockquote class="reveal">The story of the Zorba name is one of resilience across borders, of craft carried from mountain villages to modern enterprise, and of a spirit that found its way into music, literature, and memory. Its future belongs to those who choose to carry its best qualities forward.</blockquote>
+
+      <div class="pillars reveal">
+        <div class="pillar"><div class="num">01</div><h4>Education</h4><p>Knowledge as the foundation for every future achievement.</p></div>
+        <div class="pillar"><div class="num">02</div><h4>Entrepreneurship</h4><p>Building enduring ventures, in the spirit of enterprises like Zorbas Bakeries.</p></div>
+        <div class="pillar"><div class="num">03</div><h4>Achievement</h4><p>Turning ambition into documented, lasting accomplishment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- I. REFERENCES -->
+  <section id="references">
+    <div class="container">
+      <span class="eyebrow">Sources</span>
+      <h2 class="section-title reveal">References</h2>
+      <p class="section-sub reveal">Factual claims on this page are drawn from the following publicly available sources.</p>
+
+      <ul class="ref-list reveal">
+        <li><a href="https://en.wikipedia.org/wiki/Nikolaos_Zorbas" target="_blank" rel="noopener">Wikipedia — "Nikolaos Zorbas"</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/George_Zorbas" target="_blank" rel="noopener">Wikipedia — "George Zorbas"</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Zorba_the_Greek" target="_blank" rel="noopener">Wikipedia — "Zorba the Greek" (novel)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Zorba_the_Greek_(film)" target="_blank" rel="noopener">Wikipedia — "Zorba the Greek" (1964 film)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Zorba_(musical)" target="_blank" rel="noopener">Wikipedia — "Zorba" (1968 musical)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Goudi_coup" target="_blank" rel="noopener">Wikipedia — "Goudi coup"</a></li>
+        <li><a href="https://en.wiktionary.org/wiki/zorba" target="_blank" rel="noopener">Wiktionary — "zorba" (Turkish etymology)</a></li>
+        <li><a href="https://www.zorbas.com.cy/" target="_blank" rel="noopener">Zorbas Bakeries, Cyprus — official site</a></li>
+      </ul>
+
+      <div class="disclaimer reveal">
+        This website is an independent editorial and educational project. It does not claim to represent an official family association, a verified single family lineage, or an heraldic authority. The decorative "Z" monogram used throughout is an original design created for this site and is <strong>not presented as a historical coat of arms</strong>. Where historical information could not be verified through reliable sources, it has been left out.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="mono-small" aria-hidden="true">Z</div>
+    <p>&copy; <span id="year"></span> The Zorba Legacy — An independent heritage &amp; history tribute project.</p>
+    <p><a href="#hero">Back to top ↑</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // Mobile nav toggle
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Scroll reveal
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // Interactive timeline
+  document.querySelectorAll('.timeline-item').forEach(function (item) {
+    var head = item.querySelector('.timeline-head');
+    var dot = item.querySelector('.dot');
+    function toggle() {
+      var isOpen = item.classList.toggle('open');
+      dot.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    head.addEventListener('click', toggle);
+    dot.addEventListener('click', toggle);
+    dot.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
+  // Footer year
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+})();
+</script>
+
+</body>
+</html>

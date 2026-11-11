@@ -843,6 +843,1148 @@
   </section>
 
   <!-- H. FUTURE -->
+
+<!-- =========================================
+     ZORBA FAMILY — NEW WEBSITE SECTION
+     Paste immediately before <!-- H. FUTURE -->
+     ========================================= -->
+
+<style>
+  .zf-section {
+    background:
+      radial-gradient(ellipse at top left, rgba(201,162,75,.10), transparent 50%),
+      linear-gradient(180deg, #132018, #0a0d0a);
+    padding: 110px 0;
+  }
+
+  .zf-intro {
+    max-width: 850px;
+    margin-bottom: 70px;
+  }
+
+  .zf-intro p {
+    color: var(--ivory-dim);
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+
+  .zf-intro strong,
+  .zf-card strong {
+    color: var(--ivory);
+  }
+
+  .zf-heading {
+    margin: 70px 0 30px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 18px;
+  }
+
+  .zf-heading h3 {
+    color: var(--gold-bright);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    margin: 0 0 10px;
+  }
+
+  .zf-heading p {
+    color: var(--ivory-dim);
+    max-width: 750px;
+  }
+
+  .zf-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+    align-items: start;
+  }
+
+  .zf-card {
+    border: 1px solid var(--line);
+    padding: 34px;
+    background: linear-gradient(
+      160deg,
+      rgba(201,162,75,.07),
+      rgba(10,13,10,.96)
+    );
+    transition: border-color .3s, transform .3s;
+    min-width: 0;
+  }
+
+  .zf-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+
+  .zf-person {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .zf-avatar {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--gold-bright);
+    background: rgba(201,162,75,.08);
+  }
+
+  .zf-role {
+    color: var(--gold);
+    font-size: .70rem;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  .zf-person h4 {
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .zf-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.45rem;
+    font-style: italic;
+    color: var(--gold-bright);
+    line-height: 1.4;
+    margin: 0 0 20px;
+  }
+
+  .zf-card > p,
+  .zf-content p {
+    color: var(--ivory-dim);
+    font-size: .94rem;
+    line-height: 1.85;
+  }
+
+  .zf-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 25px 0;
+  }
+
+  .zf-tags span {
+    padding: 6px 11px;
+    border: 1px solid var(--line);
+    color: var(--gold-bright);
+    font-size: .69rem;
+    letter-spacing: .03em;
+  }
+
+  .zf-card details {
+    border-top: 1px solid var(--line);
+    margin-top: 28px;
+  }
+
+  .zf-card summary {
+    padding: 22px 0 4px;
+    cursor: pointer;
+    color: var(--gold-bright);
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    font-size: .76rem;
+    font-weight: 500;
+    list-style: none;
+  }
+
+  .zf-card summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .zf-card summary::after {
+    content: " +";
+    float: right;
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .zf-card details[open] summary::after {
+    content: " −";
+  }
+
+  .zf-card summary:focus-visible {
+    outline: 2px solid var(--gold-bright);
+    outline-offset: 5px;
+  }
+
+  .zf-content {
+    padding-top: 24px;
+  }
+
+  .zf-content h5 {
+    color: var(--gold-bright);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.09rem;
+    margin: 26px 0 10px;
+  }
+
+  .zf-content h5:first-child {
+    margin-top: 0;
+  }
+
+  .zf-quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ivory);
+    border-left: 2px solid var(--gold);
+    padding-left: 18px;
+    margin: 28px 0 12px;
+  }
+
+  .zf-ending {
+    text-align: center;
+    max-width: 850px;
+    margin: 100px auto 0;
+  }
+
+  .zf-ending p {
+    color: var(--ivory);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    font-style: italic;
+    line-height: 1.55;
+  }
+
+  .zf-ending::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 1px;
+    background: var(--gold);
+    margin: 35px auto 0;
+  }
+
+  .zf-note {
+    color: var(--ivory-dim);
+    font-size: .8rem;
+    margin-top: 55px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+
+  @media (max-width: 850px) {
+    .zf-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .zf-card {
+      padding: 25px;
+    }
+
+    .zf-section {
+      padding: 75px 0;
+    }
+  }
+
+  /* Fit the additional navigation item */
+  @media (max-width: 1000px) {
+    nav.links {
+      display: none;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    nav.links.open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: var(--forest-2);
+      border-top: 1px solid var(--line);
+      padding: 20px 28px;
+      gap: 18px;
+      max-height: calc(100vh - 65px);
+      overflow-y: auto;
+    }
+  }
+</style>
+
+
+<section id="family" class="zf-section">
+  <div class="container">
+
+    <span class="eyebrow">The Living Legacy</span>
+
+    <h2 class="section-title">
+      The Family Behind the Name
+    </h2>
+
+    <div class="zf-intro">
+      <p>
+        Beyond the history of a surname lies something
+        even more meaningful: the people who carry its
+        legacy forward.
+      </p>
+
+      <p>
+        The modern Zorba family represents generations
+        of <strong>resilience, intellectual ambition,
+        professional excellence, sacrifice, and
+        unconditional devotion.</strong>
+      </p>
+
+      <p>
+        From overcoming war and uncertainty to building
+        distinguished careers in medicine, engineering,
+        healthcare, education, and enterprise, each
+        family member has contributed to a shared
+        history of determination and achievement.
+      </p>
+
+      <p>
+        Yet the family's greatest distinction is not
+        merely what its members have accomplished.
+        It is <strong>what they have made possible
+        for one another.</strong>
+      </p>
+    </div>
+
+
+    <!-- ==============================
+         THE FOUNDATION
+         ============================== -->
+
+    <div class="zf-heading">
+      <span class="eyebrow">First Generation</span>
+
+      <h3>The Foundation of the Family</h3>
+
+      <p>
+        Two extraordinary individuals whose determination,
+        sacrifice, knowledge, and unconditional love helped
+        establish the foundation upon which their family's
+        future continues to grow.
+      </p>
+    </div>
+
+    <div class="zf-grid">
+
+      <!-- FOUAD ASAD ZORBA -->
+
+      <article class="zf-card">
+
+        <div class="zf-person">
+          <div class="zf-avatar">FZ</div>
+          <div>
+            <span class="zf-role">Father · Family Leadership</span>
+            <h4>Fouad Asad Zorba</h4>
+          </div>
+        </div>
+
+        <div class="zf-subtitle">
+          The Pillar of the Zorba Family
+        </div>
+
+        <p>
+          A man whose life embodies extraordinary resilience,
+          ambition, perseverance, and unwavering family
+          devotion. Having experienced the realities of war
+          and political uncertainty, Fouad overcame repeated
+          challenges to build a life of security and
+          opportunity for those he loves.
+        </p>
+
+        <div class="zf-tags">
+          <span>Chemistry</span>
+          <span>Advanced Technology Company</span>
+          <span>Family Leadership</span>
+        </div>
+
+        <details>
+          <summary>Explore His Life &amp; Legacy</summary>
+
+          <div class="zf-content">
+
+            <h5>Early Life — Strength Forged by Adversity</h5>
+
+            <p>
+              Fouad was raised amid war, political instability,
+              and profound uncertainty. From an early age,
+              life exposed him to hardship and responsibilities
+              that demanded exceptional maturity and resilience.
+            </p>
+
+            <p>
+              His journey was never defined by uninterrupted
+              success. Circumstances repeatedly challenged
+              his ambitions and disrupted his plans. Yet
+              he adapted, persevered, and continued pursuing
+              a better future.
+            </p>
+
+            <h5>Education and Intellectual Ambition</h5>
+
+            <p>
+              His pursuit of studies in chemistry reflected
+              a deep respect for education, knowledge,
+              and personal advancement.
+            </p>
+
+            <p>
+              Throughout his life, he developed experience
+              across four countries:
+              <strong>Jordan, Kuwait, Canada, and
+              the United States.</strong>
+              Each chapter demanded adaptability to new
+              societies, cultures, and circumstances.
+            </p>
+
+            <h5>Professional Journey</h5>
+
+            <p>
+              Fouad established his professional career
+              with <strong>Advanced Technology Company
+              (ATC)</strong>, bringing dedication,
+              experience, and responsibility to a
+              demanding working environment.
+            </p>
+
+            <p>
+              His career represents a sustained effort
+              to provide stability, fulfill his obligations,
+              and create a stronger financial future
+              for his family.
+            </p>
+
+            <h5>A Lifetime of Family Responsibility</h5>
+
+            <p>
+              His most meaningful accomplishments reach
+              beyond professional success. Fouad remained
+              deeply committed to his parents, ensuring
+              that his mother and father received the
+              respect, care, and support they deserved.
+            </p>
+
+            <p>
+              As a husband and father, he consistently
+              worked to provide his wife and children
+              with comfort, security, educational
+              opportunity, and a life far removed
+              from the uncertainties of his childhood.
+            </p>
+
+            <h5>His Enduring Legacy</h5>
+
+            <p>
+              He is one of the principal architects of
+              the modern Zorba family's story.
+              His sacrifices helped shape its present,
+              while his determination continues to inspire
+              the generations that follow.
+            </p>
+
+            <blockquote class="zf-quote">
+              He inherited a world of uncertainty and
+              helped create a world of opportunity.
+            </blockquote>
+
+          </div>
+        </details>
+      </article>
+
+
+      <!-- HUDA ABDUL-FATTAH KARTAM -->
+
+      <article class="zf-card">
+
+        <div class="zf-person">
+          <div class="zf-avatar">HK</div>
+          <div>
+            <span class="zf-role">Mother · Scholar · Educator</span>
+            <h4>Dr. Huda Abdul-fattah Kartam</h4>
+          </div>
+        </div>
+
+        <div class="zf-subtitle">
+          The Heart of the Family — A Woman Beyond Comparison
+        </div>
+
+        <p>
+          An accomplished scholar, professor, devoted mother,
+          and irreplaceable foundation of her family.
+          Dr. Huda combines intellectual distinction with
+          extraordinary compassion and a lifetime
+          of selfless devotion.
+        </p>
+
+        <div class="zf-tags">
+          <span>Computer Science</span>
+          <span>Doctorate</span>
+          <span>PAAET Kuwait</span>
+          <span>Education</span>
+        </div>
+
+        <details>
+          <summary>Explore Her Life &amp; Legacy</summary>
+
+          <div class="zf-content">
+
+            <h5>A Brilliant Mind Guided by an Extraordinary Heart</h5>
+
+            <p>
+              Dr. Huda pursued computer science, a discipline
+              requiring analytical thinking, precision,
+              and intellectual discipline.
+            </p>
+
+            <p>
+              She subsequently earned her doctorate and
+              established an academic career at the
+              <strong>Public Authority for Applied Education
+              and Training (PAAET) in Kuwait.</strong>
+            </p>
+
+            <p>
+              Her work in education reflects her belief
+              that teaching extends beyond transferring
+              knowledge. It involves strengthening confidence,
+              inspiring ambition, and helping individuals
+              realize their potential.
+            </p>
+
+            <h5>Five Years of Unconditional Love</h5>
+
+            <p>
+              One of the most defining chapters of her life
+              began when her child faced a serious illness
+              requiring treatment abroad.
+            </p>
+
+            <p>
+              For <strong>five years</strong>, she remained
+              beside her child, confronting uncertainty,
+              emotional hardship, and significant personal
+              sacrifice.
+            </p>
+
+            <p>
+              During those years she became more than
+              a source of support. She provided comfort,
+              courage, stability, and the familiar warmth
+              of home in an unfamiliar country.
+            </p>
+
+            <p>
+              She placed her child's well-being above her
+              own comfort and ambitions, demonstrating
+              a form of devotion that cannot be
+              adequately measured or repaid.
+            </p>
+
+            <h5>A Mother Whose Love Knows No Limits</h5>
+
+            <p>
+              Her compassion has always extended beyond
+              times of crisis. She is the person who notices
+              small worries, offers support without
+              hesitation, and remains beside others
+              even through the most difficult circumstances.
+            </p>
+
+            <p>
+              Her children have grown up knowing that
+              her patience, generosity, forgiveness,
+              and encouragement are unconditional.
+            </p>
+
+            <h5>The Presence That Makes a Place Home</h5>
+
+            <p>
+              Dr. Huda possesses a remarkable ability
+              to make people feel welcomed, understood,
+              respected, and genuinely loved.
+            </p>
+
+            <p>
+              Her warmth transforms family gatherings.
+              Her wisdom provides reassurance,
+              and her presence creates a sense of
+              belonging that no material accomplishment
+              could replace.
+            </p>
+
+            <h5>The Foundation Beneath Every Pillar</h5>
+
+            <p>
+              To her family, she is far more than
+              an accomplished academic. She is the
+              emotional foundation beneath generations
+              of achievement.
+            </p>
+
+            <p>
+              Her sacrifices, encouragement, and faith
+              in her children helped create opportunities
+              that would otherwise have been much
+              harder to realize.
+            </p>
+
+            <h5>A Heart That Never Gives Up</h5>
+
+            <p>
+              Her compassion remains constant even
+              when life becomes complicated.
+              She continues to care, forgive,
+              encourage, and see the good in others.
+            </p>
+
+            <p>
+              Although she was not born into the Zorba
+              family, her place in its history is
+              irreplaceable. She became its heart
+              through love, sacrifice, and
+              extraordinary devotion.
+            </p>
+
+            <h5>A Legacy Greater Than Any Title</h5>
+
+            <p>
+              Her legacy lives not only in her academic
+              accomplishments or the students she has
+              taught, but also in the children she raised,
+              the family she strengthened, and the
+              lives she made better through kindness.
+            </p>
+
+            <blockquote class="zf-quote">
+              She gave up so much of her own world
+              to make ours better, and in doing so,
+              she became our entire world.
+            </blockquote>
+
+            <p>
+              <em>
+                No achievement I could ever earn,
+                no honor I could ever receive,
+                and no success I could ever experience
+                would be greater than the privilege
+                of calling her my mother.
+              </em>
+            </p>
+
+          </div>
+        </details>
+      </article>
+
+    </div>
+
+
+    <!-- ==============================
+         THE NEXT GENERATION
+         ============================== -->
+
+    <div class="zf-heading">
+
+      <span class="eyebrow">The Next Generation</span>
+
+      <h3>Four Paths. One Shared Foundation.</h3>
+
+      <p>
+        Each of Fouad and Huda's children has followed
+        a distinctive path, contributing to the family's
+        continued legacy through professional achievement,
+        intellectual ambition, compassion, and dedication.
+      </p>
+
+    </div>
+
+    <div class="zf-grid">
+
+
+      <!-- SARAH FOUAD ZORBA -->
+
+      <article class="zf-card">
+
+        <div class="zf-person">
+          <div class="zf-avatar">SZ</div>
+          <div>
+            <span class="zf-role">Healthcare · Rehabilitation</span>
+            <h4>Sarah Fouad Zorba</h4>
+          </div>
+        </div>
+
+        <div class="zf-subtitle">
+          Excellence, Compassion, and Unwavering Strength
+        </div>
+
+        <p>
+          A licensed physiotherapist specializing in
+          orthopedic rehabilitation, Sarah combines
+          clinical expertise, professional ambition,
+          and exceptional compassion for others.
+        </p>
+
+        <div class="zf-tags">
+          <span>Physiotherapy</span>
+          <span>Orthopedic Rehabilitation</span>
+          <span>Georgetown Leadership</span>
+        </div>
+
+        <details>
+          <summary>Explore Her Achievements</summary>
+
+          <div class="zf-content">
+
+            <h5>Professional Excellence in Physiotherapy</h5>
+
+            <p>
+              As a licensed physiotherapist, Sarah
+              dedicates her professional life to helping
+              patients overcome physical limitations,
+              restore mobility, regain independence,
+              and return to meaningful daily activities.
+            </p>
+
+            <h5>Advanced Clinical Expertise</h5>
+
+            <p>
+              She has completed specialized training in
+              <strong>dry needling and manual therapy</strong>,
+              strengthening her ability to deliver
+              individualized orthopedic rehabilitation.
+            </p>
+
+            <h5>Leadership and Professional Development</h5>
+
+            <p>
+              Sarah earned a
+              <strong>leadership certification
+              from Georgetown University</strong>,
+              reflecting her commitment to growth
+              beyond clinical practice.
+            </p>
+
+            <h5>A Source of Strength for Her Family</h5>
+
+            <p>
+              Beyond her professional accomplishments,
+              Sarah is distinguished by her empathy,
+              loyalty, patience, and encouragement.
+            </p>
+
+            <p>
+              She has been a constant source of support
+              for her brother through personal challenges,
+              achievements, and uncertain circumstances.
+              Her belief in his potential has made
+              a meaningful difference in his life.
+            </p>
+
+            <blockquote class="zf-quote">
+              She helps others regain their strength
+              through her profession, while giving
+              those she loves the strength to keep going.
+            </blockquote>
+
+          </div>
+        </details>
+
+      </article>
+
+
+      <!-- NADEEN FOUAD ZORBA -->
+
+      <article class="zf-card">
+
+        <div class="zf-person">
+          <div class="zf-avatar">NZ</div>
+          <div>
+            <span class="zf-role">Engineering · Education</span>
+            <h4>Nadeen Fouad Zorba</h4>
+          </div>
+        </div>
+
+        <div class="zf-subtitle">
+          Brilliance, Compassion, and Unconditional Love
+        </div>
+
+        <p>
+          A distinguished civil engineering graduate,
+          educator, and devoted mother of two,
+          Nadeen embodies the combination of
+          academic excellence and extraordinary care.
+        </p>
+
+        <div class="zf-tags">
+          <span>Civil Engineering</span>
+          <span>Top of Her Class</span>
+          <span>Master's in Education</span>
+        </div>
+
+        <details>
+          <summary>Explore Her Achievements</summary>
+
+          <div class="zf-content">
+
+            <h5>Academic Brilliance</h5>
+
+            <p>
+              Nadeen pursued a degree in
+              <strong>Civil Engineering</strong>,
+              distinguishing herself through
+              exceptional discipline and academic
+              performance.
+            </p>
+
+            <p>
+              She ultimately
+              <strong>graduated at the top of her class</strong>,
+              a reflection of her intellectual
+              ability and determination.
+            </p>
+
+            <h5>A Graduation Speech Defined by Love</h5>
+
+            <p>
+              During her graduation speech,
+              Nadeen made a deeply meaningful choice.
+              Rather than focusing solely on her
+              own accomplishments, she spoke of
+              her younger brother, who was
+              battling illness abroad.
+            </p>
+
+            <p>
+              At a moment when she was being recognized
+              for academic distinction, her greatest
+              concern remained the well-being of
+              someone she loved.
+            </p>
+
+            <h5>From Engineering to Education</h5>
+
+            <p>
+              Motivated by a desire to nurture,
+              encourage, and inspire others,
+              she pursued a
+              <strong>Master's degree in Education</strong>.
+            </p>
+
+            <p>
+              Through education, she began applying
+              her intellectual abilities toward
+              developing people, encouraging
+              ambition, and shaping futures.
+            </p>
+
+            <h5>A Devoted Mother of Two</h5>
+
+            <p>
+              Nadeen has always possessed a naturally
+              nurturing character, supporting those
+              around her with patience and compassion.
+            </p>
+
+            <p>
+              As a <strong>mother of two</strong>,
+              she brings that same love, discipline,
+              and selflessness into raising
+              her children.
+            </p>
+
+            <blockquote class="zf-quote">
+              She began her journey learning to build
+              physical foundations and devoted her
+              life to building people, dreams,
+              and futures.
+            </blockquote>
+
+          </div>
+        </details>
+
+      </article>
+
+
+      <!-- DR. YASMINE FOUAD ZORBA -->
+
+      <article class="zf-card">
+
+        <div class="zf-person">
+          <div class="zf-avatar">YZ</div>
+          <div>
+            <span class="zf-role">Medicine · Mentorship</span>
+            <h4>Dr. Yasmine Fouad Zorba</h4>
+          </div>
+        </div>
+
+        <div class="zf-subtitle">
+          A Distinguished Physician and Pillar of Strength
+        </div>
+
+        <p>
+          An accomplished physician whose journey reflects
+          years of discipline, perseverance, and dedication
+          to patient care and medical education.
+        </p>
+
+        <div class="zf-tags">
+          <span>Internal Medicine</span>
+          <span>Two Board Certifications</span>
+          <span>Medical Education</span>
+        </div>
+
+        <details>
+          <summary>Explore Her Achievements</summary>
+
+          <div class="zf-content">
+
+            <h5>A Journey Defined by Perseverance</h5>
+
+            <p>
+              Dr. Yasmine pursued medicine through
+              years of rigorous study, examinations,
+              professional training, and personal
+              sacrifice.
+            </p>
+
+            <p>
+              She graduated from medical school and
+              achieved <strong>two board certifications
+              in Internal Medicine</strong>,
+              demonstrating exceptional commitment
+              to her profession.
+            </p>
+
+            <h5>Excellence in Patient Care</h5>
+
+            <p>
+              She approaches her responsibilities
+              with a deep understanding that behind
+              every diagnosis is a person whose
+              health, dignity, and well-being matter.
+            </p>
+
+            <h5>Teaching the Next Generation</h5>
+
+            <p>
+              Beyond clinical practice, she dedicates
+              time to <strong>teaching and mentoring
+              future physicians</strong>,
+              sharing knowledge, experience,
+              and encouragement.
+            </p>
+
+            <h5>A Pillar of Family Strength</h5>
+
+            <p>
+              Despite the demands of medicine,
+              Dr. Yasmine remains committed to
+              her family, offering support,
+              wisdom, compassion, and reassurance
+              through difficult moments.
+            </p>
+
+            <h5>Life Beyond Medicine</h5>
+
+            <p>
+              She enjoys <strong>volleyball,
+              physical activity, and meaningful
+              time with her family</strong>,
+              maintaining a balance between
+              professional achievement and
+              personal well-being.
+            </p>
+
+            <blockquote class="zf-quote">
+              To her patients, a physician.
+              To aspiring doctors, a mentor.
+              To her family, an irreplaceable
+              source of strength.
+            </blockquote>
+
+          </div>
+        </details>
+
+      </article>
+
+
+      <!-- MOHAMMED FOUAD ZORBA -->
+
+      <article class="zf-card">
+
+        <div class="zf-person">
+          <div class="zf-avatar">MZ</div>
+          <div>
+            <span class="zf-role">Engineering · Entrepreneurship</span>
+            <h4>Mohammed Fouad Zorba</h4>
+          </div>
+        </div>
+
+        <div class="zf-subtitle">
+          The Relentless Visionary
+        </div>
+
+        <p>
+          A civil engineer at Kuwait Oil Company,
+          Mohammed combines technical discipline,
+          entrepreneurial ambition, and an
+          unwavering determination to create
+          lasting prosperity for his family.
+        </p>
+
+        <div class="zf-tags">
+          <span>Civil Engineering</span>
+          <span>Kuwait Oil Company</span>
+          <span>Entrepreneurship</span>
+        </div>
+
+        <details>
+          <summary>Explore His Achievements</summary>
+
+          <div class="zf-content">
+
+            <h5>Professional Excellence in Engineering</h5>
+
+            <p>
+              Mohammed works as a
+              <strong>civil engineer at
+              Kuwait Oil Company (KOC)</strong>,
+              applying technical knowledge,
+              analytical reasoning, and
+              professional discipline.
+            </p>
+
+            <h5>An Entrepreneurial Mindset</h5>
+
+            <p>
+              His ambitions extend beyond
+              a traditional professional career.
+              He regularly explores independent
+              ventures, side projects,
+              and business opportunities.
+            </p>
+
+            <p>
+              He believes challenges can conceal
+              opportunities, and that failed plans
+              should inspire new approaches
+              rather than surrender.
+            </p>
+
+            <h5>Financial Independence and Generational Security</h5>
+
+            <p>
+              His pursuit of financial success
+              is driven by a desire to create
+              security, independence, and
+              opportunity for those he loves.
+            </p>
+
+            <p>
+              To Mohammed, prosperity is
+              meaningful not merely because
+              of personal wealth, but because
+              of the opportunities it can
+              create for future generations.
+            </p>
+
+            <h5>Dedication Beyond Professional Responsibility</h5>
+
+            <p>
+              Even with demanding commitments,
+              he remains willing to help
+              family members, share his
+              experience, and stand beside
+              those who need his support.
+            </p>
+
+            <blockquote class="zf-quote">
+              An engineer by education,
+              an entrepreneur by instinct,
+              and a provider by conviction.
+            </blockquote>
+
+          </div>
+        </details>
+
+      </article>
+
+    </div>
+
+
+    <!-- ==============================
+         FAMILY CLOSING TRIBUTE
+         ============================== -->
+
+    <div class="zf-ending">
+
+      <span class="eyebrow">The Enduring Legacy</span>
+
+      <p>
+        The Zorba family's greatest legacy
+        is not simply the careers its members
+        have built, the qualifications they
+        have earned, or the ambitions
+        they have fulfilled.
+      </p>
+
+      <p>
+        It is the extraordinary love,
+        determination, and sacrifice
+        that have made each successive
+        generation's achievements possible.
+      </p>
+
+      <p>
+        <strong>
+          A family defined not only by
+          what it has accomplished,
+          but by what its members
+          have made possible for one another.
+        </strong>
+      </p>
+
+    </div>
+
+    <p class="zf-note">
+      These biographical tributes are based on
+      family-provided accounts and are separate
+      from the historical surname research
+      presented elsewhere on this website.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- Add FAMILY to the existing navigation menu -->
+<script>
+  (function () {
+    const nav = document.querySelector("nav.links");
+    if (!nav || nav.querySelector('a[href="#family"]')) return;
+
+    const familyLink = document.createElement("a");
+    familyLink.href = "#family";
+    familyLink.textContent = "Family";
+
+    const futureLink = nav.querySelector('a[href="#future"]');
+
+    if (futureLink) {
+      nav.insertBefore(familyLink, futureLink);
+    } else {
+      nav.appendChild(familyLink);
+    }
+  })();
+</script>
+
   <section class="future" id="future">
     <div class="container">
       <span class="eyebrow">Looking Forward</span>
